@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #404040;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #56ADFF;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2092fd;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+p {
+    font-family: 'Ubuntu';
+    font-size: 16px;
+}
+
+.external-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wave {
+    width: 100%;
+    height: 100px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    background-color: #282828c4;
+}
+
+#logo {
+    margin-left: 20px;
+}
+
+#menu {
+    width: 50%;
+    margin-right: 60px;
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#menu ul li a {
+    font-size: 16px;
+}
+
+/*
+#menu-button {
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    background-color: #1F1F1F;
+    border: none;
+    border-radius: 3px;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+#menu-button img {
+    margin-top: 5px;
+}
+
+#menu-burger {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    right: -55%;
+    background-color: #282828;
+    width: 50%;
+    height: 100vh;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, .4);
+    transition: right 0.5s ease-in-out;
+}
+
+#menu-burger.open {
+    right: 0;
+}
+
+#menu-burger.closed {
+    right: -55%;
+}
+
+#menu-burger ul {
+    margin-top: 60px;
+    width: 100%;
+}
+
+#menu-burger nav ul li {
+    width: 100%;
+    padding: 10px;
+}
+
+#menu-burger nav ul li:hover {
+    background-color: #1F1F1F;
+    cursor: pointer;
+}
+*/
+article {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Ubuntu';
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    padding: 5px 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+}
+
+h4 {
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h5 {
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#accueil {
+    background-image: url("assets/img/triangles-background.png");
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#accueil section {
+    /*
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+    display: flex;
+    flex-direction: row;
+    padding-top: 240px;
+    width: 60%;
+}
+
+#accueil section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 46px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+#accueil section p {
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: left;
+    width: 80%;
+}
+
+#accueil section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#accueil section ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /*margin: 12px 17px;*/
+    margin-right: 34px;
+    background-color: #56ADFF;
+    border-radius: 50px;
+}
+
+#accueil section ul li span {
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    color: #000000;
+}
+
+#accueil section ul li img {
+    margin-right: 10px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(304deg) brightness(97%) contrast(103%);
+}
+
+#external-links-accueil {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 50%;
+}
+
+#external-links-accueil ul li {
+    width: 60px;
+    height: 60px;
+    background-color: #D1DBE4;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wave-accueil {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+}
+
+.curve {
+    width: 100%;
+    position: relative;
+}
+
+.top-curve {
+    top: -2px;
+}
+
+#formations {
+    position: relative;
+    background-color: #D1DBE4;
+}
+
+#formations h2 {
+    position: absolute;
+    background-color: #282828;
+    color: #FFFFFF;
+}
+
+#formations section {
+    background-color: #282828;
+    color: #FFFFFF;
+    width: 60%;
+    border-left: 10px#2092fd solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 60px;
+    padding: 20px;
+    padding-right: 30px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+}
+
+#formations .first-section {
+    margin-top: 120px;
+}
+
+#formations .last-section {
+    margin-bottom: 40px;
+}
+
+#formations section h4, .period {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#formations section .option, #formations section .location, #formations section p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+.location::before {
+    content: url("assets/img/location.svg");
+    margin-right: 5px;
+}
+
+#formations section .location {
+    display: flex;
+}
+
+#competences {
+    position: relative;
+    background-color: #282828;
+    z-index: 5;
+}
+
+#competences h2 {
+    position: absolute;
+    background-color: #2092fd;
+    color: #000;
+    margin-top: 10px;
+}
+
+#competences .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#competences .first-line, #competences .last-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+#competences section {
+    border: 2px dashed #2092fd;
+    border-radius: 20px;
+}
+
+#competences section .title-competence {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    margin-top: -15px;
+}
+
+#competences section .title-competence h4 {
+    background-color: #282828;
+    padding: 0 5px;
+}
+
+#competences section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    margin: 0;
+    margin-bottom: 20px;
+    width: 440px;
+}
+
+#competences section ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+#competences section ul li img {
+    width: 50px;
+}
+
+#competences section ul li p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.top-curve-realisations {
+    top: -6px;
+}
+
+.bottom-curve-realisations {
+    bottom: -6px;
+}
+
+#realisations {
+    position: relative;
+    background-color: #D1DBE4;
+}
+
+#realisations h2 {
+    position: absolute;
+    background-color: #282828;
+    color: #FFFFFF;
+    margin-top: 80px;
+}
+
+#realisations .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#realisations .content section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #282828;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+}
+
+#realisations .content section img {
+    height: 175px;
+    width: 175px;
+}
+
+.popup-realisation-background {
+    display: none; /* Cache la popup initialement */
+    position: fixed; /* La rend indépendante du scroll */
+    width: 100%; /* Couvre toute la largeur */
+    height: 100%; /* Couvre toute la hauteur */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 10000; /* S'assure qu'elle est au-dessus des autres éléments */
+}
+
+.popup-realisation .close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: -12px;
+    right: -15px;
+    cursor: pointer;
+}
+
+.popup-realisation {
+    position: relative; /* Centrée par rapport à son parent */
+    width: 60%; /* Largeur de la popup */
+    height: 70%;
+    margin: 7% auto; /* Centrage vertical et horizontal */
+    padding: 20px;
+    background: #282828; /* Fond blanc pour le contenu de la popup */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.popup-realisation-content h4 {
+    width: max-content;
+}
+
+.popup-realisation .popup-realisation-image {
+    width: 45%;
+    text-align: center;
+}
+
+.popup-realisation .popup-realisation-image img {
+    width: 75%;
+}
+
+.popup-realisation-content {
+    height: 90%;
+    overflow-y: scroll;
+    width: 53%;
+    background-color: #1F1F1F;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.popup-realisation-content h4, .popup-realisation-content .period {
+    display: inline-block;
+}
+
+.popup-realisation-content .period {
+    float: right;
+}
+
+.techno-used {
+    margin-top: 40px;
+    position: relative;
+}
+
+.techno-used ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: end;
+}
+
+.techno-used ul li {
+    text-align: center;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.techno-used ul li img {
+    height: 40px;
+}
+
+.techno-used ul li p {
+    margin: 0;
+}
+
+
+#experiences {
+    position: relative;
+    background-color: #282828;
+}
+
+#experiences h2 {
+    position: absolute;
+    background-color: #2092fd;
+    color: #000;
+    margin-top: 40px;
+}
+
+#experiences section {
+    background-color: #FFFFFF;
+    color: #000;
+    width: 60%;
+    border-left: 10px#2092fd solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 60px;
+    padding: 20px;
+    padding-right: 30px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+}
+
+#experiences .first-section {
+    margin-top: 140px;
+    margin-bottom: 40px;
+}
+
+#experiences .last-section {
+    margin-bottom: 40px;
+}
+
+#experiences section h4, .period {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#experiences section .option, #experiences section .location, #experiences section p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+.location::before {
+    content: url("assets/img/location.svg");
+    margin-right: 5px;
+}
+
+#experiences section .location {
+    display: flex;
+}
+
+#contact {
+    position: relative;
+    background-color: #D1DBE4;
+}
+
+#contact h2 {
+    position: absolute;
+    background-color: #282828;
+    color: #FFFFFF;
+    margin-top: 200px;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#contact .content section, #contact .content form {
+    width: 50%;
+}
+
+#contact .content section {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+#contact .content section h4 {
+    margin-right: 40px;
+}
+
+#contact .content section ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+#contact .content section ul li {
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    border: 4px #282828 solid;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#contact .content section ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .content section ul li a img {
+    width: 30px;
+}
+
+#contact form div {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#contact form .text-input label {
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: -10px;
+    left: 18px;
+    background-color: #D1DBE4;
+    padding: 0 4px;
+}
+
+#contact form .text-input input {
+    border: 2px dashed #282828;
+    border-radius: 20px;
+    background: none;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#contact form .submit-input input {
+    background-color: #282828;
+    border-radius: 20px;
+    color: #fff;
+    width: 150px;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+}
+
+footer {
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
